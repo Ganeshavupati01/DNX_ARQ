@@ -14,7 +14,7 @@ export default function TaskPage() {
 
   // ✅ fetch tasks from backend API
   useEffect(() => {
-    fetch("http://localhost:5000/tasks")
+  fetch("https://dnx-arq.vercel.app/tasks")
       .then((res) => res.json())
       .then((data) => setTasks(data))
       .catch((err) => console.error("Error fetching tasks:", err));

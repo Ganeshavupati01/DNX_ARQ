@@ -13,7 +13,7 @@ export default function MentorsPage() {
 
   // ✅ fetch mentors from backend API
   useEffect(() => {
-    fetch("http://localhost:5000/mentors")
+  fetch("https://dnx-arq.vercel.app/mentors")
       .then((res) => res.json())
       .then((data) => setMentors(data))
       .catch((err) => console.error("Error fetching mentors:", err));

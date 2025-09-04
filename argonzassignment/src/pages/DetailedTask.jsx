@@ -52,7 +52,7 @@ export default function DetailedTask() {
       const payload = { completed: completedCount, total: totalSteps };
 
       if (task?._id) {
-        fetch(`http://localhost:5000/tasks/${task._id}/progress`, {
+  fetch(`https://dnx-arq.vercel.app/tasks/${task._id}/progress`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
