@@ -1,0 +1,87 @@
+.detailed-task-content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.video-section {
+  margin-bottom: 16px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.server-progress {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.assessment-steps {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assignment-sidebar {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  flex-shrink: 0;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* File drop */
+.file-drop {
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.file-meta {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.submit-btn {
+  background: #10b981;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ✅ Responsive rules */
+@media (max-width: 767px) {
+  .detailed-task-content {
+    flex-direction: column;
+    align-items: center; /* ensures children are centered if smaller than 100% */
+  }
+
+  .assignment-sidebar {
+    width: 100%;          /* not full width, so it can center */
+     /* prevent it from stretching too much */
+     /* auto horizontally centers */
+  }
+}
+

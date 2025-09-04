@@ -1,0 +1,78 @@
+.arrow-buttons {
+  display: flex;
+  gap: 4px;
+}
+/* NewTask Section Styles */
+
+.task-section {
+  margin-bottom: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+.task-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.task-section-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+.task-carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.task-carousel::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+}
+.task-carousel::-webkit-scrollbar-thumb {
+  background: #e0e7ff;
+  border-radius: 4px;
+}
+/* Arrow buttons always visible on desktop */
+.arrow-buttons button {
+  background: #fff;
+  border: none;
+  font-size: 24px;
+  color: #3b82f6;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin: 0 4px;
+  box-shadow: 0 2px 8px rgba(96,165,250,0.12);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-buttons button:hover {
+  background: #eef2ff;
+  color: #1d4ed8;
+}
+@media (max-width: 700px) {
+  .task-carousel {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding-bottom: 0;
+  }
+  .arrow-buttons button {
+    display: none;
+  }
+  .task-section-header {
+    margin-bottom: 10px;
+  }
+}
