@@ -2,7 +2,7 @@ import React from "react";
 
 function Avatar({ src, name }) {
   if (src) return <img src={src} className="avatar-img" alt={name} />;
-  // fallback initials
+  
   const initials = (name || "U")
     .split(" ")
     .map((n) => n[0])

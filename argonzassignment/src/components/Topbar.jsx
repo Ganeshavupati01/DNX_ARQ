@@ -5,7 +5,7 @@ export default function Topbar({
   setSearch,
   onCategoryClick,
   onSortClick,
-  pageType = "mentors", // default to mentors
+  pageType = "mentors", 
 }) {
   const isMentors = pageType === "mentors";
   return (
