@@ -58,6 +58,46 @@ html,body,#root { height:100%; margin:0; font-family:'Poppins',system-ui,Arial; 
 }
 .search-input { border:0; outline:none; font-size:14px; flex:1; padding:6px; }
 .search-icon { color: #9ca3af; }
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #6366f1;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: stretch;
+}
+.sidebar-mobile {
+  width: 240px;
+  background: #fff;
+  height: 100vh;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  z-index: 1001;
+}
 
 .topbar-right { background: linear-gradient(180deg,#fff,#fff); display:flex; align-items:center; gap:12px; margin-top: 30px;}
 .chip { border:1px solid rgba(0,0,0,0.06); padding:8px 12px; border-radius:10px; background:#fff; display:flex; align-items:center; gap:8px; }
@@ -151,7 +191,7 @@ html,body,#root { height:100%; margin:0; font-family:'Poppins',system-ui,Arial; 
 
 @media (max-width: 700px) {
   .mentors-grid { grid-template-columns: 1fr; }
-  .search-wrapper { width:220px; }
+  .search-wrapper { width:280px; }
   .topbar { flex-direction:column; align-items:flex-start; gap:12px; }
   .topbar{
     margin: -12px;
@@ -160,4 +200,33 @@ html,body,#root { height:100%; margin:0; font-family:'Poppins',system-ui,Arial; 
   .sidebar { display:none; }
   .main-area { padding:16px; }
   .recent-tile { min-width:260px; }
-}
+  .hamburger {
+    display: flex;
+  }
+  .sidebar-mobile-overlay {
+    display: flex;
+  }
+  .sidebar-mobile {
+    display: block;
+    /* Show sidebar links and logo in mobile sidebar */
+    width: 50%;
+    padding: 28px;
+  }
+  .sidebar-mobile .sidebar {
+    display: flex !important;
+    flex-direction: column;
+    width: 60%;
+    background: #fff;
+    height: 100vh;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .sidebar-mobile .sidebar-item .label {
+    display: inline;
+  }
+  .sidebar-mobile .logo {
+    display: flex;
+  }
+  }
+

@@ -114,53 +114,33 @@ export default function DetailedTask() {
                 {assessmentSteps.map((step, idx) => {
                   const checked = checkedSteps.includes(idx);
                   return (
-                    <label
-                      key={idx}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 12,
-                        cursor: "pointer",
-                        userSelect: "none",
-                      }}
-                    >
-                      <div
-                        onClick={() => handleCheckboxChange(idx)}
-                        role="checkbox"
-                        aria-checked={checked}
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            e.preventDefault();
-                            handleCheckboxChange(idx);
-                          }
-                        }}
-                        style={{
-                          width: 34,
-                          height: 34,
-                          borderRadius: "50%",
-                          border: "2px solid #ccc",
-                          background: checked ? "#27ae60" : "#fff",
-                          display: "inline-flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: "#fff",
-                          fontSize: 18,
-                          transition: "background .15s, border-color .15s",
-                        }}
-                      >
-                        {checked ? "✓" : null}
-                      </div>
-                      <div
-                        style={{
-                          fontSize: 16,
-                          color: checked ? "#16a34a" : "#111",
-                          fontWeight: checked ? 600 : 400,
-                        }}
-                      >
-                        {step}
-                      </div>
-                    </label>
+                    <label key={idx}>
+  <div
+    className={`check-circle ${checked ? "checked" : ""}`}
+    onClick={() => handleCheckboxChange(idx)}
+    role="checkbox"
+    aria-checked={checked}
+    tabIndex={0}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handleCheckboxChange(idx);
+      }
+    }}
+  >
+    {checked ? "✓" : null}
+  </div>
+  <div
+    style={{
+      fontSize: 16,
+      color: checked ? "#16a34a" : "#111",
+      fontWeight: checked ? 600 : 400,
+    }}
+  >
+    {step}
+  </div>
+</label>
+
                   );
                 })}
               </div>
