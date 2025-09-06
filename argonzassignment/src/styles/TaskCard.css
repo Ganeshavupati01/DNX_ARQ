@@ -61,20 +61,22 @@
   .task-card {
     min-width: 180px;
     max-width: 200px;
+    min-height: 280px;
     padding: 10px 6px 8px 6px;
   }
   .task-image img {
-    height: 60px;
+    height: 120px;
   }
 }
 @media (max-width: 700px) {
   .task-card {
     min-width: 90vw;
     max-width: 95vw;
+    min-height: 280px;
     margin-right: 12px;
     padding: 10px 4px 8px 4px;
   }
   .task-image img {
-    height: 50px;
+    height: 120px;
   }
 }

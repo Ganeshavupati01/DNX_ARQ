@@ -7,8 +7,8 @@ import DetailedTask from "./pages/DetailedTask";
 export default function App() {
   return (
     <Routes>
-      <Route path="/mentors" element={<MentorsPage />} />
       <Route path="/" element={<TaskPage />} />
+      <Route path="/mentors" element={<MentorsPage />} />
   <Route path="/tasks/:id" element={<DetailedTask />} />
     </Routes>
   );
