@@ -28,6 +28,34 @@
   margin-top: 6px;
 }
 
+.assessment-steps label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.check-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;         /* ✅ prevents resizing */
+  font-size: 18px;
+  transition: background .15s, border-color .15s;
+}
+
+.check-circle.checked {
+  background: #27ae60;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+
 .assessment-steps {
   margin-top: 12px;
   display: flex;
